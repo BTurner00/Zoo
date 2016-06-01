@@ -6,12 +6,18 @@ public class Main {
         Animal d = createAnimal("Dog");
         Animal s = createAnimal ("Snake");
         Animal h = createAnimal("Hawk");
-        //Animal a = new Animal();
+        Animal a = new Reptile() {
+            @Override
+            public void makeSound() {
+                System.out.println("Croak!");
+            }
+        };
 
+        a.name = "alligator";
         d.makeSound();
         s.makeSound();
         h.makeSound();
-        //a.makeSound();
+        a.makeSound();
 
         System.out.println(d);
         System.out.println(s);
