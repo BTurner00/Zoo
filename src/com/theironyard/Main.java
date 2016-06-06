@@ -13,6 +13,11 @@ public class Main {
             }
         };
 
+        Runnable r = () -> {
+            System.out.println("Hello from lambda!");
+        };
+        sayHello(r);
+
         a.name = "alligator";
         d.makeSound();
         s.makeSound();
@@ -35,5 +40,10 @@ public class Main {
                 return new Hawk();
         }
         return new Animal();
+    }
+
+    public static void sayHello (Runnable runnable) {
+        System.out.println("Hello!");
+        runnable.run();
     }
 }
